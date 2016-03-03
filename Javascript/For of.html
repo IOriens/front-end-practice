@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For of</title>
+</head>
+<body>
+<script>
+    'use strict'
+    var a=['A','B','C']
+    var s=new Set(['A','B',"C",'C'])
+    var m=new Map([['Adam',89],['Lucy',34]])
+    console.log('=====')
+    for (var x of a){
+        console.log(x)
+    }
+    console.log('=====')
+    for (var x of s){
+        console.log(x)
+    }
+    console.log('=====')
+    for (var x of m){
+        console.log(x[0]+'='+x[1])
+    }
+
+</script>
+</body>
+</html>

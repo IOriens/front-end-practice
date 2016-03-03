@@ -1,0 +1,321 @@
+@charset "utf-8";
+
+/*!*Color*/
+/*================================ *!*/
+/*.div-a{background-color: #d6c84b;}*/
+/*.div-b{background-color: #a7dce0;}*/
+/*.div-c{background-color: #e1e9dc;}*/
+
+
+/** {*/
+  /*-webkit-box-sizing: border-box;*/
+     /*-moz-box-sizing: border-box;*/
+          /*box-sizing: border-box;*/
+/*}*/
+
+/*@font-face{*/
+	/*font-family:myFont;	*/
+	/*src:url(../font/Sansation_Light.woff);*/
+/*}*/
+
+/*body{*/
+	/*font-size:15px;*/
+/*}*/
+
+/*.wrapper1 h1{*/
+	/*color:blue;*/
+	/*text-align:center;*/
+/*}*/
+
+/*.wrapper1 h2 {*/
+	/*color:green;*/
+	/*text-decoration:line-through;*/
+	/*font-size:14px;*/
+/*}*/
+
+/*.wrapper1  p{*/
+	/*text-indent: 2em;*/
+	/*font-size:12px;*/
+	/*color:yellow;*/
+	/*background-color:black;	*/
+/*}*/
+
+/*.wrapper1 img{*/
+	/*border:2px solid red;*/
+/*}*/
+
+/*#p_first {*/
+	/*word-spacing: 3em;*/
+	/*font-size:40px;*/
+	/*line-height: 20px;*/
+	/*font-weight:bolder;*/
+/*}*/
+
+
+
+/*#p_third{*/
+	/*white-space:pre-wrap;*/
+	/*font:16px/4.5 "Comic sans MS",cursive;*/
+	/*text-transform:uppercase;*/
+/*}*/
+
+/*#p_forth{*/
+	/*font-size:30px;*/
+	/*font-family: myFont;*/
+/*}*/
+
+
+/*.wrapper{*/
+    /*!*水平居中方法一：flexbox，设置在父元素中。*/
+    /*================================ *!*/
+	/*!*-webkit-display: flex;*!*/
+			/*!*display: flex;*!*/
+	  /*!*-webkit-align-items: center;*!*/
+	          /*!*align-items: center;*!*/
+	/*!*-webkit-justify-content: center;*!*/
+	        /*!*justify-content: center;*!*/
+    /*background-color: #26bcd5;*/
+    /*width: 100%;*/
+    /*height: 50px;*/
+
+	/*position:relative;*/
+/*}*/
+
+
+/*.bd2 {*/
+	/*background-color: red;*/
+	/*height: 20px;*/
+	/*width: 960px;*/
+
+    /*!*水平居中方法二：margin auto，设置在子元素中。*/
+   /*================================ *!*/
+    /*!*margin:0 auto;*!*/
+
+    /*!*水平居中方法三：相对定位，设置在子元素中。父元素需设置position:relative,子元素需设置position:absolute;*/
+    /*margin的top和left设置为负值可实现水平和垂直居中。*/
+    /*好处在于无论你是什么形式的内容都可以马上居中，而缺点就是必须对元素有确定的宽高值，否则的话可能就需要通过javascript来进行一些小计算了。*/
+   /*================================ *!*/
+    /*position:absolute;*/
+    /*top:50%;*/
+    /*left:50%;*/
+	/*margin-top: -10px;*/
+    /*margin-left: -480px;*/
+/*}*/
+
+
+/*!*用两种不同的方法来实现一个两列布局，其中左侧部分宽度固定、右侧部分宽度随浏览器宽度的变化而自适应变化*/
+/*================================ *!*/
+
+/*!*方法一： float*/
+/*================================ *!*/
+/*!**/
+/*.row1{*/
+	/*overflow:hidden;*/
+/*}*/
+/*.div-a {*/
+	/*float:left;*/
+	/*width:500px;*/
+/*}*/
+/*.div-b {*/
+	/*margin-left: 200px;*/
+	/*padding-bottom:900px;*/
+	/*margin-bottom: -900px;*/
+/*}*/
+/**!*/
+
+/*!*方法二： position*/
+/*================================ *!*/
+/*!**/
+/*.wrapper2{*/
+	/*position: relative;*/
+/*}*/
+/*.div-a{*/
+	/*position:absolute;*/
+	/*width:200px;*/
+	/*left:0px;*/
+/*}*/
+
+/*.div-b{*/
+	/*margin-left: 200px;*/
+/*}*/
+/**!*/
+/*.flex-col-2 {*/
+	/*display:flex;*/
+
+/*}*/
+
+/*.div-a {*/
+	/*padding:20px;*/
+	/*width:600px;*/
+/*}*/
+
+/*.div-b {*/
+	/*padding:20px;*/
+	/*!*width:100%;*!*/
+	/*flex:1;*/
+/*}*/
+
+
+
+
+/* Float Clearfix
+================================ */
+
+.group:after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+
+.clearfix {
+	clear:both;
+}
+
+.parent3{
+	display: flex;
+}
+
+.a3 {
+	background-color: red;
+	width:200px;
+	min-height:30px;
+}
+
+.b3 {
+	flex:1;
+	min-height:30px;
+	background-color: blue;
+}
+
+.c3 {
+	min-height:30px;
+	background-color: yellow;
+}
+
+.c3 h3{
+	margin: 0;
+}
+
+/*三列布局:Flex
+=================*/
+.three-col-1 {
+	display:flex;
+}
+.three-col-1 .a{
+	width:200px;
+	background-color: #d6c84b;
+	min-height:40px;
+}
+
+.three-col-1 .b{
+	flex:1;
+	background-color: #a7dce0;
+	min-height:40px;
+}
+
+.three-col-1 .c{
+	width:400px;
+	background-color: #e1e9dc;
+	min-height:40px;
+}
+
+/*三列布局: 双飞翼
+=================*/
+
+.three-col-2 .main{
+	float:left;
+	width:100%;
+	background-color: #d6c84b;
+	min-height:40px;
+}
+
+.three-col-2 .content{
+	margin-left: 300px;
+	margin-right: 400px;
+}
+
+.three-col-2 .left{
+	float:left;
+	width:300px;
+	margin-left: -100%;
+	background-color: #a7dce0;
+	min-height:40px;
+}
+
+.three-col-2 .right{
+	float:left;
+	width:400px;
+	margin-left: -400px;
+	background-color: #e1e9dc;
+	min-height:40px;
+}
+
+/*三列布局: 圣杯布局
+=================*/
+
+
+.three-col-3 {
+	padding-left: 300px;
+	padding-right: 400px;
+    overflow:hidden;
+}
+.three-col-3 .main{
+	float:left;
+	width:100%;
+	background-color: #d6c84b;
+	min-height:40px;
+}
+
+.three-col-3 .left{
+	float:left;
+	width:300px;
+	margin-left: -100%;
+	background-color: #a7dce0;
+	min-height:40px;
+
+	position:relative;
+	left:-300px;
+}
+
+.three-col-3 .right{
+	float:left;
+	width:400px;
+	margin-left: -400px;
+	background-color: #e1e9dc;
+	min-height:40px;
+
+	position:relative;
+	right: -400px;
+}
+
+
+/*自适应盒子 inline-block
+=================*/
+.box-ul {
+    background-color: #26bcd5;
+    list-style-type: none;
+}
+
+.box-ul li{
+    display:inline-block;
+    background-color: #d6c84b;
+    padding:40px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+/*自适应盒子 float
+=================*/
+.box-ul2 {
+    background-color: #26bcd5;
+    list-style-type: none;
+    overflow: auto;
+}
+
+.box-ul2 li{
+    float:left;
+    background-color: #d6c84b;
+    padding:40px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}

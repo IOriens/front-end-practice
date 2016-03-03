@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>双飞翼布局介绍</title>
+    <style>
+        /*Color
+        ===============================*/
+        #hd,#ft{
+          background-color: gainsboro;
+            padding:20px;
+            text-align: center;
+            clear: both;
+        }
+
+        #bd {
+            background-color: deepskyblue;
+
+        }
+
+
+        .main {
+            background-color: #0099FF;
+            float: left;
+            width: 100%;
+
+        }
+        .main-wrapper{
+            margin: 0 230px 0 190px;
+        }
+        .sub {
+            background-color: aquamarine;
+            float: left;
+            width: 190px;
+            margin-left: -100%;
+
+            /*以下代码在圣杯布局中使用
+            =======================*/
+            /*position:relative;*/
+            /*left:-190px;*/
+            /*display:none;*/
+        }
+        .extra {
+            background-color: lightskyblue;
+            float: left;
+            width: 230px;
+            margin-left: -230px;
+
+            /*以下代码在圣杯布局中使用
+            =======================*/
+            /*position:relative;*/
+            /*right:-230px;*/
+            /*display:none;*/
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page2">
+        <div id="hd">
+            <p>Header</p>
+        </div>
+        <div id="bd">
+            <div class="main">
+                <div class="main-wrapper">
+                    <p>Main</p>
+                <pre>
+    .main {
+        float: left;
+        width: 100%;
+    }
+                </pre>
+                </div>
+            </div>
+            <div class="sub">
+                <p>Sub</p>
+                <pre>
+    .sub {
+        float: left;
+        width: 190px;
+        margin-left: -100%;
+    }
+                </pre>
+            </div>
+            <div class="extra">
+                <p>Extra</p>
+                <pre>
+    .extra {
+        float: left;
+        width: 230px;
+        margin-left: -230px;
+    }
+                </pre>
+            </div>
+        </div>
+        <div id="ft">
+            <p>Footer</p>
+        </div>
+    </div>
+
+</body>
+</html>

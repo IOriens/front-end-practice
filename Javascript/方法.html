@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>方法</title>
+</head>
+<body>
+<script>
+    var xiaoming={
+        name:'丁俊杰',
+        birth:1995,
+        age:function(){
+            var y=new Date().getFullYear();
+            return y-this.birth
+        }
+    }
+
+    console.log(xiaoming.age)
+</script>
+</body>
+</html>
