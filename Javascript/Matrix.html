@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Matrix</title>
+</head>
+<body>
+<script>
+    Array.matrix = function (m, n, initial) {
+        var a, i, j, mat = []
+        for(i = 0; i < m; i += 1) {
+            a = []
+            for (j = 0; j < n; j++) {
+                a[j] = initial
+            }
+            mat[i] = a
+        }
+        return mat
+    }
+
+    var myMatrix = Array.matrix(4, 4, 0)
+    myMatrix[3][3] = 10
+    console.log(myMatrix[3][3])
+</script>
+</body>
+</html>

@@ -1,5 +1,14 @@
-strong { color: red; }
+strong { color: red; background-color: #dedefe;}
 .carrot { color: orange; }
 .spinach { color: green; }
 #first { font-style: italic; }
 p{color:blue;}
+p:before {content: url(../images/Yellow-pin.png)}
+.first-para {background: url("../images/Blue-rule.png");}
+html,body,.multimedia{
+    height: 100%;
+}
+video {
+    width: 100%;
+    height: 100%;
+}

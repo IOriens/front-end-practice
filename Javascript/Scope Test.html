@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scope Test</title>
+</head>
+<body>
+<script>
+    var foo = function () {
+        var a = 3, b = 5
+
+        var bar = function () {
+            var b = 7, c = 11
+            a += b + c
+        }
+
+        bar()
+
+        console.log(a)
+        console.log(b)
+    }
+//        console.log(a) //Error
+    foo()
+
+    var add = function() {
+        var result = 0
+        for(var i=0; i < arguments.length; i++) {
+            result += arguments[i]
+        }
+        return result
+    }
+
+    var sum = add(1,3)
+    console.log(sum)
+</script>
+</body>
+</html>

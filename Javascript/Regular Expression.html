@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Regular Expression</title>
+</head>
+<body>
+<script>
+    var my_regexp = /"(?:\\.|[^\\\"])*"/g
+    console.log(my_regexp.toString())
+
+    var my_regxp2 = new RegExp("\"(?:\\\\.|[^\\\\\\\"])*\"",'g')
+    console.log(my_regxp2.toString())
+</script>
+</body>
+</html>

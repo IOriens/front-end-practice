@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fibonacci</title>
+</head>
+<body>
+<script>
+    //    直接构造Fibonacci
+    //    var fibonacci = function () {
+    //        var memo = [0, 1]
+    //        var fib = function (n) {
+    //            var result = memo[n]
+    //            if (typeof result !== 'number') {
+    //                result = fib(n-1) + fib(n-2)
+    //                memo[n] = result
+    //            }
+    //            return result
+    //        }
+    //        return fib
+    //    }()
+
+    //通过memoizer来构造
+    var memoizer = function (memo, fundamental) {
+        var shell = function(n) {
+            var result = memo[n]
+            if (typeof result !== 'number') {
+                result = fundamental(shell, n)
+                memo[n] = result
+            }
+            return result
+        }
+        return shell
+    }
+
+    var fibonacci = memoizer([0, 1], function(shell, n) {
+        return shell(n-1) + shell(n-2)
+    })
+    var i
+    for( i = 0; i <= 100; i++) {
+        console.log(i + '： ' + fibonacci(i))
+    }
+
+
+    var factorial = memoizer([1, 1], function(shell, n){
+        return n * shell(n-1)
+    })
+
+    for( i= 0; i<=100; i++) {
+        console.log(factorial(i))
+    }
+</script>
+</body>
+</html>
+
