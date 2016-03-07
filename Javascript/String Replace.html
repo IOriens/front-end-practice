@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>String Replace</title>
+</head>
+<body>
+<script>
+    var oldareacode = /\((\d{3})\)/
+    var p = '(555)666-1212'.replace(oldareacode, "$'-")
+    console.log(p)
+
+//  Insert a incrementing num after each word
+
+    var str1 = 'dfad dfs sdfsdf dfs'
+//    Method 1
+    var myRegEx = /\s/g
+    var i = 4
+    var str2 = str1.replace(myRegEx,function(){
+        return (i++) + ' '
+    })
+    console.log(str2)
+
+//    Method 2
+    var myRegEx2 = /\w+/g
+    var i = 4
+    var str3 = str1.replace(myRegEx2, function(c){
+        return c+(i++)
+    })
+    console.log(str3)
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Splice and Slice</title>
+</head>
+<body>
+<script>
+    var a=['A','B','C','D']
+    var aCopy= a.slice()
+    console.log(aCopy[1])
+    console.log(a===aCopy)
+    console.log(a[1]===aCopy[1])
+    var a2 = a.splice(a.length,0,'fd','fdf')
+    console.log(a.join(' '))
+
+
+</script>
+</body>
+</html>
