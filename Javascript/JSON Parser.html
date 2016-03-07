@@ -134,7 +134,70 @@
                     error("Bad string")
                 },
                 white = function () {
+
                     // Skip whitespace.
+                    while(ch && ch <= ' ') {
+                        next()
+                    }
+                },
+
+                word = function () {
+
+
+                    // true, false, or null.
+                    switch (ch) {
+                        case 't':
+                            next('t')
+                            next('r')
+                            next('u')
+                            next('e')
+                            return true
+                        case 'f':
+                            next('f')
+                            next('a')
+                            next('l')
+                            next('s')
+                            next('e')
+                            return false
+                        case 'n':
+                            next('n')
+                            next('u')
+                            next('l')
+                            next('l')
+                            return null
+                    }
+                    error("Unexpected '" + ch + "'")
+                },
+
+                value,
+
+                array = function () {
+                    // Parse an array value
+
+                    var array = [];
+
+                    if (ch === '[') {
+                        next('[')
+                        white()
+                        if (ch === ']') {
+                            next(']')
+                            return array //empty array
+                        }
+                    }
+
+                    while (ch) {
+                        array.push(value())
+                        white()
+                        if (ch === ']') {
+                            next(']')
+                            return array
+                        }
+                        next(',')
+                        white()
+                    }
+
+
+
                 }
     }
 </script>
