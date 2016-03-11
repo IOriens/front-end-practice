@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <style>
+        @font-face {
+            font-family: 'icomoon';
+            src:    url('font/icomoon.eot?t136nx');
+            src:    url('font/icomoon.eot?t136nx#iefix') format('embedded-opentype'),
+            url('font/icomoon.ttf?t136nx') format('truetype'),
+            url('font/icomoon.woff?t136nx') format('woff'),
+            url('font/icomoon.svg?t136nx#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        [class^="icon-"], [class*=" icon-"] {
+            /* use !important to prevent issues with browser extensions that change fonts */
+            font-family: 'icomoon' !important;
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+
+            /* Better Font Rendering =========== */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .icon-home:before {
+            content: "\e900";
+            padding-right: 8px;
+        }
+        .icon-mobile2:before {
+            content: "\e901";
+            padding-right: 8px;
+        }
+        .icon-mail4:before {
+            content: "\e902";
+            padding-right: 8px;
+        }
+        .icon-github:before {
+            content: "\e903";
+            padding-right: 8px;
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /*font-family: myFont;*/
+            font-family: "Microsoft YaHei" ! important;
+        }
+        /** {*/
+            /*font-family: "Microsoft YaHei" ! important;*/
+        /*}*/
+
+
+        .main {
+            height: 1052px;
+            background-color: #fff;
+        }
+        .left {
+            float: left;
+            width: 37%;
+            height: 100%;
+            background-color: #23c2aa;
+            text-align: center;
+            color: #fff;
+        }
+        .right {
+            float: right;
+            width: 63%;
+            height: 100%;
+        }
+
+        .left img {
+            width: 150px;
+            height: 150px;
+            display: block;
+            border-radius: 75px;
+            margin: 25px auto;
+        }
+
+        .left h1 {
+            font-size: 1.8em;
+            font-weight: 700;
+            padding-bottom: 15px;
+        }
+        .left h2 {
+            font-size: 1.3em;
+            color: #0f7e72;
+            font-weight: 700;
+            padding-bottom: 30px;
+        }
+
+        .skills-fe {
+            padding-bottom: 20px;
+        }
+        .left p {
+            font-weight: 700;
+            padding-bottom: 5px;
+        }
+
+        .personal-desc {
+            margin-top: 130px;
+            color: #098674;
+            font-size: 0.9em;
+            font-weight: 400;
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+        }
+
+        .contact {
+            font-weight: bolder;
+            margin-top: 40px;
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 16px;
+        }
+        .contact-ul {
+            text-align: left;
+            list-style-type: none;
+        }
+        .contact-ul li{
+            padding-bottom: 5px;
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+
+        .right {
+            padding: 25px;
+            font-size: 14px;
+        }
+        .right h1 {
+            color: #22c1b2;
+            margin-bottom: 10px;
+        }
+
+        .right h2 {
+            color: #555351;
+            font-size: 1.2em;
+        }
+
+        .right h3 {
+            color: #72706c;
+            margin-top: 3px;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            clear: left;
+        }
+
+        .right div {
+            padding-bottom: 20px;
+        }
+
+        .interest h2{
+            margin-bottom: 5px;
+        }
+        .right p {
+            text-align: justify;
+            width: 78%;
+        }
+
+        .projects h2{
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="left">
+        <figure>
+            <img src="image/photo.png" alt="photo">
+        </figure>
+        <h1>丁俊杰</h1>
+        <h2>Web前端开发工程师</h2>
+
+
+        <ul class="skills-fe">
+            <p>- 前端技能 -</p>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>JQuery</li>
+            <li>SASS</li>
+        </ul>
+
+
+        <ul class="skills-fe">
+            <p>- 后端技能 -</p>
+            <li>Java</li>
+            <li>JSP</li>
+            <li>Maven</li>
+            <li>MySQL</li>
+        </ul>
+
+        <ul class="skills-be">
+            <p>- 英语能力 -</p>
+            <li>四级：570</li>
+            <li>六级：530</li>
+        </ul>
+
+        <p class="personal-desc">
+            热爱运动，勤奋好学，关注前端。 正在寻找前端相关的暑假实习，希望在学习新知识的同时能为贵公司提供一定的生产力。
+        </p>
+        <div class="contact vcard">
+            <ul class="contact-ul">
+                <li class="icon-mobile2"><span>15223358012</span></li>
+                <li class="icon-mail4"><span>djjoriens@gmail.com</span></li>
+                <li class="icon-home"><a href="http://www.ioriens.com">ioriens.com</a></li>
+                <li class="icon-github"><a href="https://github.com/IOriens">github.com/IOriens</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="right">
+        <div class="projects">
+            <h1>项目经历</h1>
+            <h2>网络相册</h2>
+            <p>前端用JSP和HTML5完成页面结构的编写，使用Bootstrap框架实现页面表现层，后端用Java的Servelet以及JDBC来处理客户端请求并完成相关数据库操作</p>
+            <h3>2015年12月</h3>
+            <h2>新闻网页爬虫</h2>
+            <p>通过爬取学校新闻网站数据来构建自己的新闻网站。采用MVC设计模式，前端页面采用JSP,HTML和CSS实现。后端使用JSoup实现新闻网页内容的抓取，使用Lucene对新闻内容进行索引并提供快速检索功能</p>
+            <h3>2015年10月</h3>
+            <h2>交通灯控制系统</h2>
+            <p>使用Verilog语言编写程序，在开发板上模拟交通灯控制系统，实现倒计时与灯状态转换功能</p>
+            <h3>2015年4月</h3>
+        </div>
+        <div class="intern">
+            <h1>实习经历</h1>
+            <h2>中软国际 （小组获得优秀团队奖）</h2>
+            <h3>2015年7月</h3>
+        </div>
+        <div class="honor">
+            <h1>荣誉</h1>
+            <h2>国家励志奖学金</h2>
+            <h3>2015年10月</h3>
+            <h2>重庆大学优秀共青团员</h2>
+            <h3>2015年4月</h3>
+            <h2>重庆大学丙等奖学金</h2>
+            <h3>2015年3月</h3>
+
+        </div>
+        <div class="education">
+            <h1>学历</h1>
+            <h2><span>重庆大学</span> <span>计算机科学与技术</span></h2>
+            <h3>2013年9月 - 2017年6月</h3>
+        </div>
+        <div class="interest">
+            <h1>兴趣爱好</h1>
+            <h2>健身、马拉松</h2>
+            <h2>通过前辈博客了解前端动向</h2>
+            <h2>阅读英文专业资料，观看无字幕美剧</h2>
+        </div>
+    </div>
+</div>
+</body>
+</html>
