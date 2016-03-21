@@ -1,0 +1,16 @@
+$color-body: #000;
+$color-bcg: #688;
+$side: left;
+$def-font-size: 16px;
+body {
+  color: $color-body;
+  background-color: blue;
+}
+
+.border-side {
+  border-#{$side}-radius: 90px;
+  background-color: #479;
+  width: 10px*10;
+  height: 20px*10;
+  margin: 0 auto;
+}

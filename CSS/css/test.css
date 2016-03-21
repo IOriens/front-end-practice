@@ -1,0 +1,12 @@
+body {
+  color: #000;
+  background-color: blue; }
+
+.border-side {
+  border-left-radius: 90px;
+  background-color: #479;
+  width: 100px;
+  height: 200px;
+  margin: 0 auto; }
+
+/*# sourceMappingURL=test.css.map */
